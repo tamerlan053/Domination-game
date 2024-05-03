@@ -7,6 +7,7 @@ namespace Domination
 {
     public class Block
     {
+        private Rectangle _rectangle;
     }
 }
 
