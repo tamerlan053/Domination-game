@@ -8,6 +8,7 @@ namespace Domination
     public class Block
     {
         private Rectangle _rectangle;
+        private Player _owner;
     }
 }
 
