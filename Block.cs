@@ -10,5 +10,13 @@ namespace Domination
         private Rectangle _rectangle;
         private Player _owner;
     }
-}
 
+    public Block(int rowNumber, int colomNumber, int margin, int width)
+    {
+        _rectangle = new Rectangle()
+        {
+
+        };
+        _owner = Player.None;
+    }
+}
