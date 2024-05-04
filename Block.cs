@@ -15,7 +15,10 @@ namespace Domination
     {
         _rectangle = new Rectangle()
         {
-
+            Width = width,
+            Height = width,
+            Stroke = new SolidColorBrush(Colors.Black),
+            Margin = new Thickness((colomNumber * width) + margin, (rowNumber * width) + margin, 0, 0)
         };
         _owner = Player.None;
     }
