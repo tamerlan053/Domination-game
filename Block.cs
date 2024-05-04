@@ -22,4 +22,10 @@ namespace Domination
         };
         _owner = Player.None;
     }
+
+    public Player Owner
+    {
+            get { return _owner; }
+            set { _owner = value; }
+    }
 }
