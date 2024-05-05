@@ -9,23 +9,32 @@ namespace Domination
     {
         private Rectangle _rectangle;
         private Player _owner;
-    }
 
-    public Block(int rowNumber, int colomNumber, int margin, int width)
-    {
-        _rectangle = new Rectangle()
+        public Block(int rowNumber, int colomNumber, int margin, int width)
         {
-            Width = width,
-            Height = width,
-            Stroke = new SolidColorBrush(Colors.Black),
-            Margin = new Thickness((colomNumber * width) + margin, (rowNumber * width) + margin, 0, 0)
-        };
-        _owner = Player.None;
-    }
+            _rectangle = new Rectangle()
+            {
+                Width = width,
+                Height = width,
+                Stroke = new SolidColorBrush(Colors.Black),
+                Margin = new Thickness((colomNumber * width) + margin, (rowNumber * width) + margin, 0, 0)
+            };
+            _owner = Player.None;
+        }
 
-    public Player Owner
-    {
+        public Player Owner
+        {
             get { return _owner; }
-            set { _owner = value; }
+            set { 
+                _owner = value;
+                if (value == Player.Red)
+                {
+                    _rectangle.Fill = new SolidColorBrush(Colors.Red);
+                } else
+                {
+                    _rectangle.Fill = new SolidColorBrush(Colors.Red);
+                }
+            }
+        }
     }
 }
