@@ -36,5 +36,10 @@ namespace Domination
                 }
             }
         }
+
+        public void DisplayBlockOnCanvas(Canvas canvas)
+        {
+            canvas.Children.Add(_rectangle);
+        }
     }
 }
