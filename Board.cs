@@ -5,6 +5,10 @@ namespace Domination
     public class Board
     {
         private Block[,] _blocks;
+
+        public Board(int rows, int columns, int margin, int blockWidth) {
+            
+        }
     }
 }
 
