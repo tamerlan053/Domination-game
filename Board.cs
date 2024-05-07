@@ -19,6 +19,10 @@ namespace Domination
 
         public void DisplayBoardOnCanvas(Canvas canvas)
         {
+            foreach (Block block in _blocks)
+            {
+                block.DisplayBlockOnCanvas(canvas);
+            }
         }
     }
 }
