@@ -16,6 +16,10 @@ namespace Domination
                 }
             }
         }
+
+        public void DisplayBoardOnCanvas(Canvas canvas)
+        {
+        }
     }
 }
 
