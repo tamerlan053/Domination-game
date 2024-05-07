@@ -8,6 +8,13 @@ namespace Domination
 
         public Board(int rows, int columns, int margin, int blockWidth) {
             _blocks = new Block[rows, columns];
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++) {
+                    _blocks[i, j] = new Block(i, j, margin, blockWidth);
+                }
+            }
         }
     }
 }
