@@ -24,6 +24,10 @@ namespace Domination
                 block.DisplayBlockOnCanvas(canvas);
             }
         }
+
+        public void ClaimBlocks(int rowIndex,  int columnIndex, Player player) {
+            
+        }
     }
 }
 
