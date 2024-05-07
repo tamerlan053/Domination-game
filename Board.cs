@@ -26,7 +26,10 @@ namespace Domination
         }
 
         public void ClaimBlocks(int rowIndex,  int columnIndex, Player player) {
-            
+            if (_blocks[rowIndex, columnIndex].Owner != Player.None)
+            {
+                throw new DominationException("Error, it is busy!");
+            };
         }
     }
 }
