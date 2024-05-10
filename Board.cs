@@ -30,6 +30,14 @@ namespace Domination
             {
                 throw new DominationException("Error, it is busy!");
             };
+
+            if (player == Player.Red)
+            {
+                if (rowIndex + 1 >= _blocks.GetLength(0))
+                {
+                    throw new DominationException("Underlying block does not exist!");
+                }
+            }
         }
     }
 }
