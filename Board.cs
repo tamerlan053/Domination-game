@@ -45,6 +45,8 @@ namespace Domination
                 
                 _blocks[rowIndex, columnIndex].Owner = Player.Red;
                 _blocks[rowIndex + 1, columnIndex].Owner = Player.Red;
+            } else if (player == Player.Blue) {
+                
             }
         }
     }
