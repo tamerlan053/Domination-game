@@ -37,6 +37,11 @@ namespace Domination
                 {
                     throw new DominationException("Underlying block does not exist!");
                 }
+
+                if (_blocks[rowIndex + 1, columnIndex].Owner != Player.None) {
+ 
+                    throw new DominationException("Error, underlying block is busy!");
+                 }
             }
         }
     }
