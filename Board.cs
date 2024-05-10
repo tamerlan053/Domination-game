@@ -41,7 +41,10 @@ namespace Domination
                 if (_blocks[rowIndex + 1, columnIndex].Owner != Player.None) {
  
                     throw new DominationException("Error, underlying block is busy!");
-                 }
+                }
+                
+                _blocks[rowIndex, columnIndex].Owner = Player.Red;
+                _blocks[rowIndex + 1, columnIndex].Owner = Player.Red;
             }
         }
     }
