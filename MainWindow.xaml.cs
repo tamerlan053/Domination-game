@@ -24,6 +24,10 @@ namespace Domination
         public MainWindow()
         {
             InitializeComponent();
+            _sizeBlock = 40; 
+            _board = new Board(8, 8, _margin, _sizeBlock);
+            _board.DisplayBoardOnCanvas(paperCanvas);
+            _currentPlayer = Player.Red;
         }
     }
 }
