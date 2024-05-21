@@ -16,6 +16,11 @@ namespace Domination
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Player _currentPlayer;
+        private int _sizeBlock;
+        private int _margin;
+        private Board _board;
+        
         public MainWindow()
         {
             InitializeComponent();
