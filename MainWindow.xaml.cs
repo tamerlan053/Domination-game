@@ -29,5 +29,12 @@ namespace Domination
             _board.DisplayBoardOnCanvas(paperCanvas);
             _currentPlayer = Player.Red;
         }
+
+        private void paperCanvas_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            Point mousePosition = e.GetPosition(paperCanvas);
+            double x = mousePosition.X;
+            double y = mousePosition.Y;
+        }
     }
 }
