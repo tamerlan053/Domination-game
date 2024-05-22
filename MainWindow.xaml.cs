@@ -1,13 +1,4 @@
-﻿using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Domination
 {
@@ -20,7 +11,7 @@ namespace Domination
         private int _sizeBlock;
         private int _margin;
         private Board _board;
-        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -42,8 +33,25 @@ namespace Domination
             try
             {
                 _board.ClaimBlocks(rowIndex, colIndex, _currentPlayer);
-            } catch (DominationExcpetion ex) {
-                MessageBox.Show(ex.message);
+
+                bool hasMoveLeft = _board.HasMoveLeftFor(_currentPlayer);
+
+                if (!hasMoveLeft)
+                {
+                    MessageBox.Show($"Player {_currentPlayer} wins!");
+                } else
+                {
+                    if (_currentPlayer == Player.Red)
+                    {
+                        _currentPlayer = Player.Blue;
+                    } else
+                    {
+                        _currentPlayer = Player.Red;
+                    }
+                }
+            } catch (DominationException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
