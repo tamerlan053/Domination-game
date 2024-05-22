@@ -35,6 +35,9 @@ namespace Domination
             Point mousePosition = e.GetPosition(paperCanvas);
             double x = mousePosition.X;
             double y = mousePosition.Y;
+
+            int rowIndex = (int)(y / (_sizeBlock + _margin));
+            int colIndex = (int)(x / (_sizeBlock + _margin));
         }
     }
 }
