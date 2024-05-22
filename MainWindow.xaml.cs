@@ -38,6 +38,13 @@ namespace Domination
 
             int rowIndex = (int)(y / (_sizeBlock + _margin));
             int colIndex = (int)(x / (_sizeBlock + _margin));
+
+            try
+            {
+                _board.ClaimBlocks(rowIndex, colIndex, _currentPlayer);
+            } catch (DominationExcpetion ex) {
+                MessageBox.Show(ex.message);
+            }
         }
     }
 }
