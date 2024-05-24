@@ -8,7 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Canvas Background="AliceBlue" Name="paperCanvas" Margin="75,51,387,69" MouseUp="paperCanvas_MouseUp"/>
-        <Label Content="X Coordinate" HorizontalAlignment="Left" Margin="477,89,0,0" VerticalAlignment="Top"/>
-        <Label Content="Y Coordinate" HorizontalAlignment="Left" Margin="477,130,0,0" VerticalAlignment="Top"/>
+        <Label Name="playersTurn" HorizontalAlignment="Left" Margin="483,91,0,0" VerticalAlignment="Top"/>
+        <Label Content="X Coordinate" HorizontalAlignment="Left" Margin="480,129,0,0" VerticalAlignment="Top"/>
+        <Label Content="Y Coordinate" HorizontalAlignment="Left" Margin="480,170,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
