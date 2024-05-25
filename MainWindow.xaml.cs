@@ -15,7 +15,7 @@ namespace Domination
         public MainWindow()
         {
             InitializeComponent();
-            _sizeBlock = 40; 
+            _sizeBlock = 40;
             _board = new Board(8, 8, _margin, _sizeBlock);
             _board.DisplayBoardOnCanvas(paperCanvas);
             _currentPlayer = Player.Red;
@@ -26,6 +26,9 @@ namespace Domination
             Point mousePosition = e.GetPosition(paperCanvas);
             double x = mousePosition.X;
             double y = mousePosition.Y;
+
+            xTextBlock.Text = $"{x}";
+            yTextBlock.Text = $"{y}";
 
             int rowIndex = (int)(y / (_sizeBlock + _margin));
             int colIndex = (int)(x / (_sizeBlock + _margin));
@@ -44,9 +47,11 @@ namespace Domination
                     if (_currentPlayer == Player.Red)
                     {
                         _currentPlayer = Player.Blue;
+                        playersTurn.Content = $"Blue player's turn";
                     } else
                     {
                         _currentPlayer = Player.Red;
+                        playersTurn.Content = $"Red player's turn";
                     }
                 }
             } catch (DominationException ex)
@@ -55,4 +60,5 @@ namespace Domination
             }
         }
     }
+}
 }
