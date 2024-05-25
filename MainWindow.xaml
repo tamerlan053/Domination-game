@@ -10,6 +10,9 @@
         <Canvas Background="AliceBlue" Name="paperCanvas" Margin="75,51,387,69" MouseUp="paperCanvas_MouseUp"/>
         <Label Name="playersTurn" HorizontalAlignment="Left" Margin="483,91,0,0" VerticalAlignment="Top"/>
         <Label Content="X Coordinate" HorizontalAlignment="Left" Margin="480,129,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="xTextBlock" HorizontalAlignment="Left" Margin="597,134,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        
         <Label Content="Y Coordinate" HorizontalAlignment="Left" Margin="480,170,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="yTextBlock" HorizontalAlignment="Left" Margin="597,175,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
